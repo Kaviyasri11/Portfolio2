@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaviyasri R - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1f1f1f;
+      color: #fff;
+      background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+      /* Professional texture */
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: auto;
+    }
+
+
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #4d5d6f;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #7e9eab;
+    }
+
+    .hero {
+      padding-top: 100px;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .hero img {
+      max-width: 300px;
+      border-radius: 10px;
+      width: 90%;
+    }
+
+    .hero h2 {
+      margin-top: 20px;
+      font-size: 36px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 10px auto;
+      font-size: 16px;
+      color: #bbb;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 2px solid #fff;
+      background: none;
+      color: #fff;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .socials {
+      margin-top: 20px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      font-size: 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #477a82;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .skills img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .project-card {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .project-card h2 {
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .project-desc {
+      display: none;
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    .project-desc ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    .project-desc p {
+      margin-top: 10px;
+    }
+
+    .education,
+    .contact {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .resume a {
+      color: #fff;
+      padding: 10px 20px;
+      background-color: #475462;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact p,
+    .education p {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 0 10px 10px 0;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 22px;
+      }
+
+      .skills img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .btn {
+        font-size: 14px;
+      }
+
+      .resume a {
+        display: inline-block;
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+
+    .socials a {
+      margin: 0 15px;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .socials img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      margin-right: 8px;
+      border-radius: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Portfolio</h1>
+    <nav>
+      <a href="#projects">Project</a>
+      <a href="#education">Education</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <img src="kaviya.jpg" alt="Profile">
+    <h2>Hey! I’m Kaviyasri R</h2>
+    <p>Passionate and skilled full-stack Java developer eager to contribute and grow in the IT field.</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact
+      me</button>
+    <div class="socials">
+      <a href="https://github.com/Kaviyasri11" target="_blank">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+        <span>GitHub</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/kaviyasri-r-88936134a/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        <span>LinkedIn</span>
+      </a>
+    </div>
+
+  </div>
+
+  <section id="skills">
+    <h3>Technical Skills</h3>
+    <div class="skills">
+      <img src="https://img.icons8.com/color/48/java-coffee-cup-logo.png" alt="Java">
+      <img src="https://img.icons8.com/ios/50/mysql-logo.png" alt="MySQL">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/hibernate/hibernate-plain.svg"
+        alt="Hibernate">
+      <img src="https://img.icons8.com/color/48/spring-logo.png" alt="Spring Boot">
+      <img src="https://img.icons8.com/color/48/javascript--v1.png" alt="JavaScript">
+      <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML">
+      <img src="https://img.icons8.com/color/48/css3.png" alt="CSS">
+    </div>
+  </section>
+
+  <section id="projects">
+    <h3 onclick="toggleProjects()" style="cursor: pointer;">
+      <span id="mainArrow" class="arrow">▸</span> Projects
+    </h3>
+
+
+    <div id="projectContainer" style="display: none;">
+      <div class="project-card">
+        <h2 onclick="toggleDescription(this)">Food Delivery Web Application ▾</h2>
+        <div class="project-desc" style="display: none;">
+          <ul>
+            <li>Designed and developed a dynamic web app for ordering food with menu, cart, and checkout flow.</li>
+            <li>Cart features mimic Amazon/Swiggy: quantity update, dynamic price calc using JavaScript.</li>
+            <li>Backend: Java Servlets, JDBC, MySQL; integrated Hibernate and Spring Boot.</li>
+          </ul>
+          <p><strong>Technologies:</strong> Java, JDBC, MySQL, Hibernate, Spring Boot, HTML, CSS, JS</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h2 onclick="toggleDescription(this)">Monitoring Fake Reviews ▾</h2>
+        <div class="project-desc" style="display: none;">
+          <ul>
+            <li>Built an ML model to detect fake/computer-generated reviews using Logistic Regression and LSTM.</li>
+            <li>Preprocessed data using TF-IDF; created Streamlit UI for predictions.</li>
+          </ul>
+          <p><strong>Technologies:</strong> Python, Streamlit, LSTM, Logistic Regression, Anaconda</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="Certificate">
+    <h3 style="cursor: pointer;" onclick="toggleSection('certList', this)"><span class="arrow">▸ </span>
+      Certifications</h3>
+    <ul id="certList" style="display: none; padding-left: 20px;">
+      <li>Full Stack Java Developer - Tap Academy</li>
+      <li>Business English Certificate Preliminary - Cambridge Assessment</li>
+      <li>Soft Skills - NPTEL</li>
+      <li>Cybersecurity Privacy and Policy - NPTEL</li>
+      <li>What is Data Science - IBM (Coursera)</li>
+      <li>Oracle Certified Foundation Associate - Oracle Cloud Infrastructure</li>
+    </ul>
+  </section>
+  <section id="education">
+    <h3>Education</h3>
+    <div class="education">
+      <p><strong>B.Tech in Information Technology</strong>Sri Ramakrishna Institute of Technology</p>
+      <p>2021 – 2025</p>
+    </div>
+    <div class="education">
+      <p><strong>Higher Secondary</strong>Rasi Matric Hr Sec School</p>
+      <p>2019 – 2021</p>
+    </div>
+  </section>
+
+  <section id="resume" class="resume">
+    <h3>Resume</h3>
+    <a href="KaviyaResume.pdf" download>Download My Resume</a>
+  </section>
+
+  <section id="contact" class="contact">
+    <h3>Contact</h3>
+    <p style="color: #ccc; font-size: 0.9rem;">📍Salem, India | 📞+91 9751358104 |<a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=kaviyasrirajendran11@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i> ✉️kaviyasrirajendran11@gmail@gmail.com
+      </a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Kaviyasri R. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleDescription(header) {
+      const desc = header.nextElementSibling;
+      desc.style.display = desc.style.display === "block" ? "none" : "block";
+      header.innerHTML = header.innerHTML.includes("▾")
+        ? header.innerHTML.replace("▾", "▸")
+        : header.innerHTML.replace("▸", "▾");
+    }
+  </script>
+  <script>
+    function toggleSection(id, heading) {
+      const list = document.getElementById(id);
+      const isVisible = list.style.display === "block";
+
+      list.style.display = isVisible ? "none" : "block";
+      heading.innerHTML = (isVisible ? '▸ ' : '▾ ') + heading.textContent.slice(2);
+    }
+  </script>
+  <script>
+
+    function toggleProjects() {
+      const container = document.getElementById("projectContainer");
+      const arrow = document.getElementById("mainArrow");
+
+      const isVisible = container.style.display === "block";
+      container.style.display = isVisible ? "none" : "block";
+
+      // Rotate the arrow
+      if (arrow) {
+        arrow.classList.toggle("rotate", !isVisible);
+      }
+    }
+
+    function toggleDescription(element) {
+      const desc = element.nextElementSibling;
+      desc.style.display = desc.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</body>
+
+</html>
